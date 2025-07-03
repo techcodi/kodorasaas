@@ -3,9 +3,11 @@ import { toast } from "react-toastify";
 import supabase from "../services/supabase";
 import "./WaitList.css";
 import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 
 function WaitList() {
   const { register, handleSubmit, reset } = useForm();
+  const [count, setCount] = useState(0);
 
   const submitEmail = async ({ email }) => {
     const { error } = await supabase
@@ -18,8 +20,23 @@ function WaitList() {
     } else {
       toast.success("You're now on the waitlist 🎉");
       reset();
+      totalEmailJoined();
     }
   };
+
+  const totalEmailJoined = async () => {
+    const { count, error } = await supabase
+      .from("waitlist_emails")
+      .select("*", { count: "exact", head: true });
+
+    if (!error && count !== null) {
+      setCount(count);
+    }
+  };
+
+  useEffect(() => {
+    totalEmailJoined();
+  }, []);
 
   return (
     <>
@@ -42,6 +59,8 @@ function WaitList() {
               Join the Waitlist
             </button>
           </form>
+
+          <h2>{count} developers have already joined 🚀</h2>
 
           <div className="products">
             <div>
