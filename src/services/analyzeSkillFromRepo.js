@@ -6,6 +6,7 @@ export async function analyzeSkillFromRepo(repoName, repoDesc) {
         Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [
