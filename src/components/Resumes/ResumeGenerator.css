@@ -1,0 +1,70 @@
+.resume_header-box {
+  background: #2a7b9b;
+  background: linear-gradient(
+    478deg,
+    rgba(42, 123, 155, 1) 25%,
+    rgba(87, 199, 133, 1) 67%,
+    rgba(83, 145, 237, 1) 100%
+  );
+  color: #fff;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.resume_header-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.resume_header-box .btn-resume {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+
+  margin-top: 1rem;
+}
+.custom-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.custom-select div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 16px;
+}
+.custom-select select {
+  /* appearance: none; */
+
+  font-size: 16px;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #dddd;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+.custom-select select option {
+  border: 1px solid #ddd;
+  appearance: none;
+}
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .resume-container {
+    padding: 1rem 0;
+    min-width: 100%;
+  }
+}

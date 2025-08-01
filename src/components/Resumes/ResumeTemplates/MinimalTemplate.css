@@ -1,0 +1,97 @@
+#normal-resume-to-download {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 1123px;
+  width: 794px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.minimal {
+  font-family: Calibri, sans-serif;
+  margin: 0 !important;
+  padding: 1rem !important;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border-left: 5px solid #555;
+  text-align: left;
+  color: #555;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  gap: 2rem;
+}
+.minal-header-contact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.minal-header-contact p {
+  margin: 0;
+}
+.minal-header {
+  text-align: left;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+
+.minimal h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.github-link {
+  margin-top: -1rem;
+}
+
+.minimal h3 {
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.minimal ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.minimal ul li {
+  margin-bottom: 1rem;
+}
+.minimal strong {
+  color: #222;
+}
+.minimal-skills ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: -1.2rem;
+}
+.minimal-skills ul li {
+  background-color: #f0f0f0;
+  padding: 0.2rem 1.3rem;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: -0rem;
+  width: 60%;
+}
+.core-skills ul {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem; */
+}
+@media screen and (max-width: 750px) {
+  .normal-wraper-resume {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  .resume-preview-wrapper #noraml-resume-to-download {
+    transform: scale(0.65);
+    transform-origin: top left;
+    width: 594px;
+  }
+  .download-btn {
+    margin-left: -8rem;
+    margin-bottom: 2rem;
+  }
+}

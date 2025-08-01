@@ -1,0 +1,8 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100dvh;
+}
+.main-content {
+  flex: 1;
+  background: var(--bg-color);
+}

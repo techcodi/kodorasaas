@@ -3,3 +3,52 @@
   padding: 0;
   text-align: center;
 }
+
+.auth {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  position: relative;
+  transform: translate(0%, 20%);
+}
+.auth .auth-container {
+  width: 30%;
+  box-shadow: var(--box-shadow);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.auth-container form input {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--toggle-border);
+  border-radius: 5px;
+}
+label {
+  font-weight: 700;
+}
+.auth-container form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.7rem 2rem;
+  font-size: 19px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login {
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .auth .auth-container {
+    width: 90%;
+    box-shadow: none;
+  }
+}

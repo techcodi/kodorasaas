@@ -1,0 +1,128 @@
+.skills-container h2 {
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+}
+
+.skills-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+.skill-intro {
+  margin-bottom: 4rem;
+  color: #475569;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 0.3rem;
+}
+
+.commit-msg {
+  margin: 0.5rem 0;
+  color: #475569;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: #3b82f6;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.skill-card {
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background-color: #fdfdfd;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.skill-tag {
+  font-size: 14px;
+  background-color: #eef1f5;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.repo-name {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.all-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.skill-chart {
+  width: 100%;
+}
+.ai-insight-json {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  color: #222;
+  text-align: left;
+}
+
+.ai-insight-json h3 {
+  margin-top: 1rem;
+  color: var(--primary-color);
+}
+
+.ai-insight-json ul {
+  margin-left: 1.2rem;
+  padding-left: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .all-skills {
+    grid-template-columns: 1fr;
+  }
+  .skill-card {
+    margin-bottom: 16px;
+  }
+  .chart-pie {
+    min-width: 100px;
+    margin-left: -3rem;
+  }
+}

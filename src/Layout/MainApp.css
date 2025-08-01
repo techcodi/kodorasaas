@@ -1,0 +1,15 @@
+.main-outlet {
+  /* box-shadow: var(--box-shadow); */
+  height: 100vh;
+  overflow-y: scroll;
+  margin: -3rem 1rem 0 1rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-outlet {
+    padding: 10px 3px;
+    overflow-x: hidden;
+  }
+}

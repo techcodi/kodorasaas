@@ -1,0 +1,94 @@
+.key-benefits {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.benefits-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.benefits-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.benefits-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+}
+
+.benefits-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-blue {
+  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+}
+
+.card-purple {
+  background: linear-gradient(to bottom right, #f5f3ff, #fae8ff);
+}
+
+.card-green {
+  background: linear-gradient(to bottom right, #ecfdf5, #dcfce7);
+}
+
+.benefit-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #4f46e5;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.card-purple .benefit-icon {
+  background-color: #7c3aed;
+}
+
+.card-green .benefit-icon {
+  background-color: #10b981;
+}
+
+.benefit-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.benefit-description {
+  color: #4b5563;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

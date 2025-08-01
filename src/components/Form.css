@@ -1,0 +1,75 @@
+.commit_form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.commit_form input {
+  border: 1px solid var(--toggle-border);
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: var(--toggle-bg);
+  width: 40%;
+}
+
+.commit_form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.boards-cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.boards-cards > div {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+.card-text {
+  text-align: left;
+}
+.card-text h4 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+}
+
+.card-details i {
+  background-color: #02ec88;
+  font-size: 1.3rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 7px;
+  padding-top: 0.8rem;
+}
+
+.commit_container {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  gap: 3rem;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .boards-cards {
+    flex-direction: column;
+  }
+  .commit_container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem 0;
+  }
+  .commit_form input {
+    width: 60%;
+  }
+}

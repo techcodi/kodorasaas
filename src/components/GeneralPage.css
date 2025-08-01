@@ -1,0 +1,12 @@
+.overview {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.overview h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.overview p {
+  color: #6b7280;
+  font-size: 1rem;
+}
