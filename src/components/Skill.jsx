@@ -296,7 +296,7 @@ function Skill() {
                   <div className="spinner"></div>
                   <p>Getting you some advice...</p>
                 </div>
-              ) : (
+              ) : insights ? (
                 <div className="ai-insight-json">
                   <h2>Recommendations for you</h2>
                   <h3>🔍 Strengths</h3>
@@ -305,7 +305,6 @@ function Skill() {
                       <li key={i}>{s}</li>
                     ))}
                   </ul>
-
                   <h3>🚀 Recommended Skills</h3>
                   <ul>
                     {insights.recommendations.map((r, i) => (
@@ -314,17 +313,22 @@ function Skill() {
                       </li>
                     ))}
                   </ul>
-
                   <h3>💡 Project Ideas</h3>
                   <ul>
                     {insights.projectIdeas.map((idea, i) => (
                       <li key={i}>{idea}</li>
                     ))}
                   </ul>
-
                   <h3>🎯 Career Advice</h3>
                   <p style={{ marginLeft: "2.2rem" }}>
                     {insights.careerAdvice}
+                  </p>
+                </div>
+              ) : (
+                <div>
+                  <p>
+                    No insights available yet. Analyze your GitHub repos to get
+                    recommendations!
                   </p>
                 </div>
               )}
