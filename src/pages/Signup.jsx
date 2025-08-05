@@ -49,7 +49,7 @@ function Signup() {
     } else {
       // localStorage.setItem("pendingEmail", data.email);
       toast.success("Sign up successful!");
-      navigate("/dashboard");
+      navigate("/login");
     }
   }
 

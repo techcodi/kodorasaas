@@ -8,7 +8,8 @@ import { useAuth } from "../../context/AppContext";
 
 function ResumeGenerator() {
   const { loading } = useAuth();
-  const { generateResume, resume, isLoading, isSuccess } = useResumeGenerator();
+  const { generateResume, resume, isLoading, isSuccess, count } =
+    useResumeGenerator();
   const [selectedTemplates, setSelectedTemplates] = useState("modern");
   const [openForm, setOpenForm] = useState(false);
 
@@ -28,7 +29,6 @@ function ResumeGenerator() {
 
         <div className="custom-select">
           <div>
-            {" "}
             <h3>Choose Template:</h3>
             <select
               value={selectedTemplates}
@@ -44,6 +44,14 @@ function ResumeGenerator() {
         <button onClick={() => setOpenForm(true)} className="btn-resume">
           Create Resume
         </button>
+
+        <p>You have generated {count} / 2 resumes today.</p>
+
+        {count >= 2 && (
+          <p className="error-text" style={{ color: "red", marginTop: 8 }}>
+            You have reached your daily resume generation limit (2 per day).
+          </p>
+        )}
       </div>
 
       <ResumeForm
@@ -51,6 +59,7 @@ function ResumeGenerator() {
         isLoading={isLoading}
         openForm={openForm}
         setOpenForm={setOpenForm}
+        count={count}
       />
 
       {isLoading && (
@@ -68,6 +77,7 @@ function ResumeGenerator() {
           resume={resume}
           template={selectedTemplates}
           isLoading={isLoading}
+          count={count}
         />
       )}
     </div>

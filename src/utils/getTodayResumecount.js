@@ -1,4 +1,4 @@
-import { supabase } from "../services/supabase";
+import supabase from "../services/supabase";
 
 export async function getTodayResumeCount(user_id) {
   const { count, error } = await supabase

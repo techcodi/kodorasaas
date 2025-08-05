@@ -43,10 +43,32 @@
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { generateResumePrompt } from "../../utils/generatedResumePrompt";
+import { getTodayResumeCount } from "../../utils/getTodayResumecount";
+import { useState, useEffect } from "react";
 
-export function useResumeGenerator() {
+export function useResumeGenerator(userId) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (userId) {
+      getTodayResumeCount(userId)
+        .then(setCount)
+        .catch((err) => {
+          console.error(err);
+          setCount(0);
+        });
+    }
+  }, [userId]);
+
   const mutation = useMutation({
     mutationFn: async (formData) => {
+      // Check daily limit before generating
+      if (count >= 2) {
+        throw new Error(
+          "You have reached your daily resume generation limit (2 per day)."
+        );
+      }
+
       const prompt = generateResumePrompt(formData);
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
@@ -71,7 +93,10 @@ export function useResumeGenerator() {
         throw new Error("Invalid JSON returned");
       }
     },
-    onSuccess: () => toast.success("✅ Resume generated"),
+    onSuccess: () => {
+      toast.success("✅ Resume generated");
+      setCount((prev) => prev + 1); // Increment count after success
+    },
     onError: (err) => toast.error("❌ Failed: " + err.message),
   });
 
@@ -82,5 +107,6 @@ export function useResumeGenerator() {
     isSuccess: mutation.status === "success",
     isError: mutation.status === "error",
     error: mutation.error,
+    count, // expose count for UI
   };
 }

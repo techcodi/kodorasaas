@@ -6,7 +6,13 @@ import { fetchGithubData } from "./fetchGithubData";
 
 import "./ResumeForm.css";
 
-function ResumeForm({ generateResume, isLoading, openForm, setOpenForm }) {
+function ResumeForm({
+  generateResume,
+  isLoading,
+  openForm,
+  setOpenForm,
+  count,
+}) {
   const [repos, setRepos] = useState([]);
   const [selectedRepos, setSelectedRepos] = useState([]);
   const [userSkills, setUserSkills] = useState([]);
@@ -269,8 +275,16 @@ function ResumeForm({ generateResume, isLoading, openForm, setOpenForm }) {
               />
             </div>
 
-            <button type="submit" className="resume-btn" disabled={isLoading}>
-              {isLoading ? "Generating..." : "Generate Resume"}
+            <button
+              type="submit"
+              className="resume-btn"
+              disabled={isLoading || count >= 2}
+            >
+              {isLoading
+                ? "Generating..."
+                : count >= 2
+                ? "Daily Limit Reached"
+                : "Generate Resume"}
             </button>
           </form>
         </div>

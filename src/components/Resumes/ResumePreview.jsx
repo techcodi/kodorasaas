@@ -6,7 +6,6 @@ import Loader from "../Loader"; // Or your spinner
 function ResumePreview({ resume, template, isLoading }) {
   if (isLoading) return <Loader />;
   if (!resume) return <p>No resume generated yet.</p>;
-  console.log("isloafi", isLoading);
 
   switch (template) {
     case "modern":
