@@ -72,4 +72,9 @@
   .repo-items {
     margin-left: 1rem;
   }
+  .repo-item label {
+    width: 100%;
+    text-align: left;
+    margin-left: -5rem;
+  }
 }
