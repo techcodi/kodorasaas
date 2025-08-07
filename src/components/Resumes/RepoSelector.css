@@ -1,3 +1,10 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Spinner styles */
 .repo-loading {
   display: flex;
@@ -11,8 +18,17 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
   margin-bottom: 8px;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @keyframes spin {
   0% {
@@ -31,11 +47,11 @@
 }
 .repo-item input {
   height: 20px;
-  accent-color: var(--primary-color);
+  /* accent-color: var(--primary-color); */ /* Remove or provide fallback */
   border: 3px solid #666;
   background-color: #fff;
   padding: 1rem;
-  color: var(--primary-color);
+  color: var(--primary-color, #333);
 }
 .repo-item label {
   width: 100%;
@@ -46,14 +62,14 @@
 .repo-items {
   display: flex;
   flex-direction: column;
-
   gap: 1rem;
   margin-top: 8px;
+  width: 100%;
 }
 
 /* Responsive */
 @media screen and (max-width: 765px) {
   .repo-items {
-    margin-left: 6rem;
+    margin-left: 1rem;
   }
 }
