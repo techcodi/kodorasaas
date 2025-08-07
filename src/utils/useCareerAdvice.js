@@ -33,7 +33,8 @@ export function useCareerAdvice(skillData) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "qwen/qwen3-coder:free",
+            // openai/gpt-3.5-turbo  qwen/qwen3-coder:free
+            model: "qwen/qwen-2.5-coder-32b-instruct:free",
             messages: [
               {
                 role: "system",

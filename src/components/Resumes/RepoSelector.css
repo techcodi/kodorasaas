@@ -30,6 +30,16 @@
 
   margin-bottom: 8px;
 }
+.repo-item input {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-color);
+  border: 3px solid #666;
+  background-color: #fff;
+  padding: 1rem;
+  color: var(--primary-color);
+}
 .repo-item label {
   width: 100%;
   text-align: left;

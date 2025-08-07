@@ -77,7 +77,7 @@ export function useResumeGenerator(userId) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "qwen/qwen3-coder:free",
+          model: "qwen/qwen-2.5-coder-32b-instruct:free",
           messages: [{ role: "user", content: prompt }],
         }),
       });

@@ -61,6 +61,17 @@ function ModernTemplate({ resume }) {
                   </p>
                 </div>
               </section>
+
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  {resume.education.map((edu, i) => (
+                    <li style={{ textTransform: "capitalize" }} key={i}>
+                      {edu}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="modern-rigth">
@@ -102,7 +113,7 @@ function ModernTemplate({ resume }) {
                 ))}
               </section>
 
-              <div>
+              {/* <div>
                 <h3>Education</h3>
                 <ul>
                   {resume.education.map((edu, i) => (
@@ -111,7 +122,7 @@ function ModernTemplate({ resume }) {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
 
               <div>
                 {" "}

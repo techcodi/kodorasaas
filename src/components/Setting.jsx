@@ -1,9 +1,9 @@
 function Setting() {
   return (
-    <div>
-      <h1> User Settings</h1>
+    <div style={{ marginTop: "7rem", textAlign: "center" }}>
+      <h1>Update Settings</h1>
 
-      <form></form>
+      <h3 style={{ marginTop: "2rem", textAlign: "center" }}>Coming Soon...</h3>
     </div>
   );
 }
