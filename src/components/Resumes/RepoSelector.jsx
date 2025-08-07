@@ -21,12 +21,18 @@ function RepoSelector({ repos, selectedRepos, setSelectedRepos }) {
           <ul className="repo-items">
             {repos.map((repo) => (
               <li key={repo.name} className="repo-item">
-                <input
-                  type="checkbox"
-                  checked={selectedRepos.some((r) => r.name === repo.name)}
-                  onChange={() => handleChange(repo)}
-                />
-                <label>{repo.name}</label>
+                <span>
+                  {" "}
+                  <input
+                    type="checkbox"
+                    checked={selectedRepos.some((r) => r.name === repo.name)}
+                    onChange={() => handleChange(repo)}
+                  />
+                </span>
+                <span>
+                  {" "}
+                  <label>{repo.name}</label>
+                </span>
               </li>
             ))}
           </ul>

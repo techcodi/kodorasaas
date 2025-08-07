@@ -43,7 +43,7 @@
 .repo-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  gap: 1rem;
 }
 .repo-item input {
   height: 20px;
@@ -71,10 +71,5 @@
 @media screen and (max-width: 765px) {
   .repo-items {
     margin-left: 1rem;
-  }
-  .repo-item label {
-    width: 100%;
-    text-align: left;
-    margin-left: -5rem;
   }
 }
