@@ -1,4 +1,4 @@
-/* Add to RepoSelector.css or your global CSS */
+/* Spinner styles */
 .repo-loading {
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@
   }
 }
 
+/* Repo item styles */
 .repo-item {
   display: flex;
   align-items: center;
@@ -34,7 +35,6 @@
   border: 3px solid #666;
   background-color: #fff;
   padding: 1rem;
-
   color: var(--primary-color);
 }
 .repo-item label {
@@ -42,16 +42,18 @@
   text-align: left;
 }
 
+/* Repo items container */
 .repo-items {
   display: flex;
   flex-direction: column;
-  width: 100%;
+
   gap: 1rem;
   margin-top: 8px;
 }
 
+/* Responsive */
 @media screen and (max-width: 765px) {
   .repo-items {
-    margin-left: -4rem;
+    margin-left: 6rem;
   }
 }
