@@ -3,9 +3,10 @@ import Navbar from "../components/Navbar";
 import supabase from "../services/supabase";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Login() {
-  const [message, setMessage] = useState();
+  const [isLogin, setIsLogin] = useState(false);
   const {
     register,
     handleSubmit,
@@ -16,7 +17,7 @@ function Login() {
   const navigate = useNavigate();
 
   async function onSubmitLogin(data) {
-    setMessage("");
+    setIsLogin(true);
 
     const { error } = await supabase.auth.signInWithPassword({
       email: data.email,
@@ -33,7 +34,8 @@ function Login() {
         setError("email", { type: "manual", message: error.message });
       }
     } else {
-      setMessage("Login successful!");
+      setIsLogin(false);
+      toast.success("✅Login successful!");
       navigate("/dashboard");
     }
   }
@@ -73,7 +75,18 @@ function Login() {
               </small>
             )}
 
-            <button type="submit">Login</button>
+            <button type="submit" disabled={isLogin}>
+              {isLogin ? (
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              ) : (
+                "Login"
+              )}
+            </button>
 
             <p>
               Don't have an account?

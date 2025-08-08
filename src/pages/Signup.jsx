@@ -11,12 +11,13 @@ function Signup() {
     handleSubmit,
     setError,
     formState: { errors },
-    getValues,
   } = useForm();
   const [message, setMessage] = useState();
+  const [isAuth, setIsAuth] = useState(false);
   const navigate = useNavigate();
 
   async function onSubmitEmail(data) {
+    setIsAuth(true);
     setMessage("email");
     setError("email", { message: "" });
     setError("password", { message: "" });
@@ -48,6 +49,7 @@ function Signup() {
       }
     } else {
       // localStorage.setItem("pendingEmail", data.email);
+      setIsAuth(false);
       toast.success("Sign up successful!");
       navigate("/login");
     }
@@ -74,7 +76,7 @@ function Signup() {
                 required: "Email is required",
                 pattern: {
                   value: /^[^\s@]+@gmail\.com$/,
-                  message: "Only valid @gmail.com addresses are allowed",
+                  message: "Only valid email addresses are allowed",
                 },
               })}
               placeholder="Enter your email"
@@ -114,7 +116,18 @@ function Signup() {
                 {errors.confirmedPassword.message}
               </small>
             )}
-            <button type="submit">Sign up</button>
+            <button type="submit">
+              {isAuth ? (
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              ) : (
+                "Sign up"
+              )}
+            </button>
 
             <p>
               Already have an account?
