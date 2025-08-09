@@ -9,6 +9,7 @@
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   --bg-color: #fff;
+  --border-colors: #10021b, #20003f, #150126, #ff00a8, #7000ff, #00a8ff;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,7 +64,6 @@ ul {
 a {
   text-decoration: none;
 }
-
 
 @media screen and (max-width: 500px) {
   html {

@@ -1,6 +1,5 @@
 .call-to-action {
   padding: 5rem 0;
-  background: linear-gradient(to bottom right, #111827, #1e1b4b);
 }
 
 .cta-container {
@@ -32,18 +31,37 @@
 }
 
 .cta-primary {
-  background-color: #4f46e5;
+  position: relative;
   color: #fff;
   padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  /* white-space: nowrap; */
+  border-radius: 12px;
+  background: #10021b; /* Inner background */
+  z-index: 0;
 }
 
-.cta-primary:hover {
-  background-color: #4338ca;
+.cta-primary::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(270deg, var(--border-colors));
+  background-size: 400% 400%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderGradient 6s linear infinite;
+}
+@keyframes borderGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .cta-secondary {
@@ -52,13 +70,13 @@
   padding: 1rem 2rem;
   font-size: 1.125rem;
   font-weight: 600;
-  border: 2px solid #fff;
+  border: 2px solid var(--primary-color);
   cursor: pointer;
 }
 
 .cta-secondary:hover {
-  background-color: white;
-  color: #111827;
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 @media screen and (max-width: 640px) {

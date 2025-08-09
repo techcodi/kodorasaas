@@ -8,21 +8,24 @@ import FeaturesShowcase from "../components/Landingpage/FeaturesShowcase";
 import SocialProof from "../components/Landingpage/SocialProof";
 import CallToAction from "../components/Landingpage/CallToAction";
 import Footer from "../components/Landingpage/Footer";
+import "./Landingpage.css";
 
 function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="">
+    <div className="landing-page">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       <HeroSection />
-      <KeyBenefits />
-      <HowItWorks />
-      <FeaturesShowcase />
-      <SocialProof />
-      <CallToAction />
-      <Footer />
+      <div className="landing-page-content">
+        <KeyBenefits />
+        <HowItWorks />
+        <FeaturesShowcase />
+        <SocialProof />
+        <CallToAction />
+        <Footer />
+      </div>
     </div>
   );
 }

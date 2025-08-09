@@ -3,7 +3,7 @@ import "./HeroSection.css";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  const heroImageUrl = "headbg.png";
+  const heroImageUrl = "future.jpg";
 
   return (
     <section
@@ -25,7 +25,7 @@ const HeroSection = () => {
               dream job.
             </p>
             <div className="hero-buttons">
-              <Link to="/signup" className="primary-button rounded-button">
+              <Link to="/signup" className="animated-border rounded-button">
                 Get Started Free
               </Link>
               <Link to="/login" className="secondary-button rounded-button">

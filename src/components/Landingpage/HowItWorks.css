@@ -1,12 +1,12 @@
 .how-it-works {
   padding: 5rem 0;
-  background-color: #f9fafb;
 }
 
 .works-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
+  color: #fff;
 }
 
 .works-header {
@@ -17,13 +17,12 @@
 .works-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111827;
+
   margin-bottom: 1rem;
 }
 
 .works-subtitle {
   font-size: 1.25rem;
-  color: #4b5563;
 }
 
 .steps-grid {
@@ -48,7 +47,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
   z-index: 10;
@@ -83,12 +82,8 @@
 .step-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
 
-.step-description {
-  color: #4b5563;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
