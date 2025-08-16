@@ -100,7 +100,7 @@ function ResumeForm({
             </button>
 
             <div>
-              <label>Full Name</label>
+              <h4>Full Name</h4>
               <input
                 type="text"
                 placeholder="Full Name"
@@ -109,7 +109,7 @@ function ResumeForm({
             </div>
 
             <div>
-              <label>GitHub Username</label>
+              <h4>GitHub Username</h4>
               <input
                 type="text"
                 placeholder="GitHub Username"
@@ -139,7 +139,7 @@ function ResumeForm({
             )}
 
             <div>
-              <label>Short Bio (Optional)</label>
+              <h4>Short Bio (Optional)</h4>
               <textarea
                 placeholder="Short Bio (Optional)"
                 {...register("bio")}

@@ -1,25 +1,11 @@
-import { useAuth } from "../context/AppContext";
+import ToggleDisplay from "../ui/ToggleDisplay";
 import "./nav.css";
 function Navbar() {
-  const { isDarkMode, toggleTheme } = useAuth();
-
   return (
     <nav>
       <div className="nav-container">
         <img src="/logo.png" alt="logo" />
-        <div>
-          <button
-            className={`theme-toggle ${isDarkMode ? "dark" : "light"}`}
-            onClick={toggleTheme}
-            aria-label={
-              isDarkMode ? "Switch to light mode" : "Switch to dark mode"
-            }
-          >
-            <span className="toggle-thumb" />
-            <span className="sun-icon">☀️</span>
-            <span className="moon-icon">🌙</span>
-          </button>
-        </div>
+        <ToggleDisplay />
       </div>
     </nav>
   );

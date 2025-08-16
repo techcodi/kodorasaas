@@ -1,17 +1,14 @@
-import React from "react";
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
+// import { useAuth } from "../../context/AppContext";
 
 const HeroSection = () => {
-  const heroImageUrl = "future.jpg";
+  // const { isDarkMode } = useAuth();
 
+  // const heroDarkImageUrl = "/dark.jpg";
+  // const heroLightImageUrl = "/ligth1.jpeg";
   return (
-    <section
-      className="hero-section"
-      style={{
-        backgroundImage: `url(${heroImageUrl})`,
-      }}
-    >
+    <section className="hero-section">
       <div className="hero-container">
         <div className="hero-grid">
           <div className="hero-content">
@@ -33,6 +30,8 @@ const HeroSection = () => {
               </Link>
             </div>
           </div>
+
+          <img src="/hero-img.png" alt="hero-image" className="hero-img" />
         </div>
       </div>
     </section>

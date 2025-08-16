@@ -1,0 +1,19 @@
+.profile-head {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.profile-display {
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.setting-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.setting-info h4 {
+  color: var(--text-second);
+}

@@ -41,7 +41,7 @@
 }
 
 .social-link:hover {
-  color: white;
+  color: #fff;
 }
 
 .footer-heading {
@@ -75,7 +75,7 @@
   padding: 0.5rem 1rem;
   background-color: #1f2937;
   border: none;
-  color: white;
+  color: var(--text-color);
   font-size: 0.875rem;
 }
 
@@ -84,8 +84,8 @@
 }
 
 .newsletter-button {
-  background-color: #4f46e5;
-  color: white;
+  background-color: var(--primary-color);
+  color: #fff;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -95,11 +95,11 @@
 }
 
 .newsletter-button:hover {
-  background-color: #4338ca;
+  background-color: var(--primary-color);
 }
 
 .footer-bottom {
-  border-top: 1px solid #1f2937;
+  border-top: 1px solid var(--small-color);
   padding-top: 2rem;
   display: flex;
   flex-direction: column;

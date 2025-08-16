@@ -6,12 +6,6 @@ function Sidebar({ setOpenNav, openNav }) {
     <div className="sidebar">
       <button
         className="menu-btn"
-        style={{
-          fontSize: "1.5rem",
-          fontWeight: "500",
-          textAlign: "right",
-          color: "#fff",
-        }}
         aria-label="Toggle Navigation"
         onClick={() => setOpenNav(!openNav)}
       >

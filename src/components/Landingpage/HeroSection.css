@@ -1,11 +1,5 @@
 .hero-section {
-  position: relative;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center right;
-  background-blend-mode: overlay;
 }
 
 .hero-container {
@@ -15,22 +9,18 @@
 }
 
 .hero-grid {
-  display: grid;
-  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.hero-content {
-  background: linear-gradient(90deg, #10021b, #20003f, #150126);
-
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 1rem;
-  min-width: 100px;
+.hero-img {
+  width: 100%;
 }
 
 .hero-title {
-  font-size: 3rem;
+  text-align: left;
+  font-size: 2.7rem;
   font-weight: 700;
   color: #ff00a8; /* Neon pink */
 
@@ -44,9 +34,10 @@
 
 .hero-description {
   font-size: 1.25rem;
-  color: #eee;
+  color: var(--text-color);
   margin-bottom: 2rem;
   line-height: 1.75;
+  text-align: left;
 }
 
 .hero-buttons {
@@ -56,38 +47,11 @@
 }
 
 .animated-border {
-  position: relative;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 12px;
-  background: #10021b; /* Inner background */
+  background: var(--primary-color); /* Inner background */
   z-index: 0;
-}
-
-.animated-border::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(270deg, var(--border-colors));
-  background-size: 400% 400%;
-  border-radius: inherit;
-  z-index: -1;
-  animation: borderGradient 6s linear infinite;
-}
-
-@keyframes borderGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .secondary-button {
@@ -109,18 +73,21 @@
   border: 2px solid #ff00a8;
 }
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .hero-buttons {
     flex-direction: row;
   }
-}
-
-@media (min-width: 1024px) {
+} */
+@media screen and (max-width: 950px) {
   .hero-grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
   }
-
+}
+@media (min-width: 1024px) {
   .hero-title {
     font-size: 3.75rem;
+  }
+  .hero-buttons {
+    flex-direction: row;
   }
 }

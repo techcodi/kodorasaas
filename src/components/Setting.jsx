@@ -1,9 +1,18 @@
+import ProfileDisplay from "./Settings/ProfileDisplay";
+import SettingForm from "./Settings/SettingForm";
+import { useState } from "react";
 function Setting() {
+  const [openProfileForm, setOpenProfileForm] = useState(false);
+
   return (
     <div style={{ marginTop: "7rem", textAlign: "center" }}>
-      <h1>Update Settings</h1>
-
-      <h3 style={{ marginTop: "2rem", textAlign: "center" }}>Coming Soon...</h3>
+      {openProfileForm && (
+        <SettingForm
+          openProfileForm={openProfileForm}
+          setOpenProfileForm={setOpenProfileForm}
+        />
+      )}
+      <ProfileDisplay setOpenProfileForm={setOpenProfileForm} />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import supabase from "../services/supabase";
 import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import "../App.css";
 
 function Signup() {
   const {

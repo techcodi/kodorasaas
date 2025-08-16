@@ -48,11 +48,11 @@
 }
 
 .skill-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--toggle-border);
   padding: 16px;
   border-radius: 12px;
   margin-bottom: 16px;
-  background-color: #fdfdfd;
+  background-color: var(--bg-color);
 }
 
 .skill-header {
@@ -70,6 +70,7 @@
 .skill-name {
   font-weight: bold;
   font-size: 18px;
+  color: var(--text-color);
 }
 
 .skill-tag {
@@ -96,12 +97,13 @@
   width: 100%;
 }
 .ai-insight-json {
-  background: #f7f9fc;
+  background: var(--bg-color);
   border-radius: 12px;
   padding: 1rem 1.5rem;
   margin-top: 1.5rem;
-  color: #222;
+  color: var(--text-color);
   text-align: left;
+  box-shadow: var(--box-shadow);
 }
 
 .ai-insight-json h3 {

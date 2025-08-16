@@ -6,3 +6,9 @@
   padding: 1rem;
   border-bottom: 1px solid var(--toggle-border);
 }
+
+.menu-btn {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}

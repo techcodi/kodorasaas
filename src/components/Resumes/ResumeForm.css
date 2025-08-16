@@ -112,7 +112,9 @@
   font-size: 0.85rem;
   margin-top: 4px;
 }
-
+.resume-form h4 {
+  color: #555555;
+}
 @media screen and (max-width: 850px) {
   .form_modal .resume-form {
     width: 90%;

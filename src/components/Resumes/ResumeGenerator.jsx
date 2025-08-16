@@ -5,6 +5,7 @@ import { useResumeGenerator } from "./useResumeGenerator";
 import Loader from "../Loader";
 import { useState } from "react";
 import { useAuth } from "../../context/AppContext";
+import ResumeLoader from "../../ui/ResumeLoader";
 
 function ResumeGenerator() {
   const { loading } = useAuth();
@@ -22,6 +23,7 @@ function ResumeGenerator() {
     <div className="resume-container">
       <div className="resume_header-box">
         <h2 className="resume-header">Resume Generator</h2>
+
         <p className="resume-subtitle">
           Create a professional resume in minutes. Choose a template and fill
           out the form to generate your resume.
@@ -52,8 +54,7 @@ function ResumeGenerator() {
             You have reached your daily resume generation limit (2 per day).
           </p>
         )}
-      </div>
-
+      </div>{" "}
       <ResumeForm
         generateResume={generateResume}
         isLoading={isLoading}
@@ -61,17 +62,7 @@ function ResumeGenerator() {
         setOpenForm={setOpenForm}
         count={count}
       />
-
-      {isLoading && (
-        <div
-          className="spinner-container"
-          style={{ textAlign: "center", padding: "1rem" }}
-        >
-          <div className="spinner"></div>
-          <p>Generating your resume...</p>
-        </div>
-      )}
-
+      {isLoading && <ResumeLoader />}
       {resume && isSuccess && !isLoading && (
         <ResumePreview
           resume={resume}

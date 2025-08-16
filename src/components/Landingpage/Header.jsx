@@ -1,3 +1,4 @@
+import ToggleDisplay from "../../ui/ToggleDisplay";
 import "./Header.css";
 
 const Header = ({ isMenuOpen, setIsMenuOpen }) => {
@@ -21,7 +22,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               Pricing
             </a>
           </div>
-
+          <ToggleDisplay />
           <button
             className="mobile-menu-button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

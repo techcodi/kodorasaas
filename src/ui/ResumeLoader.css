@@ -1,0 +1,44 @@
+.loading-text {
+  position: relative;
+  height: 1.5em;
+  overflow: hidden;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.loading-text span {
+  /* position: absolute; */
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: fadeMessages 6s infinite;
+  opacity: 0;
+}
+
+.loading-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loading-text span:nth-child(2) {
+  animation-delay: 2s;
+}
+.loading-text span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes fadeMessages {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10%,
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40%,
+  90% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

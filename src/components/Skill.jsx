@@ -1,7 +1,8 @@
 import supabase from "../services/supabase";
 import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "../context/AppContext";
-import { LineChart } from "@mui/x-charts/LineChart";
+import { PieChart } from "@mui/x-charts/PieChart";
+
 import Loader from "./Loader";
 
 import "./Skill.css";
@@ -38,8 +39,8 @@ function Skill() {
 
   const { data: insights, isLoading: insightsLoading } =
     useCareerAdvice(skillData);
-  const xLabels = skillData.map((s) => s.name);
-  const yValues = skillData.map((s) => s.count);
+  // const xLabels = skillData.map((s) => s.name);
+  // const yValues = skillData.map((s) => s.count);
 
   const skillMeta = {
     HTML: {
@@ -230,6 +231,14 @@ function Skill() {
       category: "Testing",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-original.svg",
     },
+    Nix: {
+      category: "DevOps",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nixos/nixos-original.svg",
+    },
+    Shell: {
+      category: "Backend",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shell/shell-original.svg",
+    },
   };
 
   if (isPending) return <Loader />;
@@ -279,13 +288,17 @@ function Skill() {
             <div className="skill-chart">
               {" "}
               <div className="chart-pie">
-                <LineChart
-                  xAxis={[{ scaleType: "point", data: xLabels }]}
+                <PieChart
                   series={[
                     {
-                      data: yValues,
-                      showMark: ({ index }) => index % 2 === 0,
-                      color: "#1976d2", // optional: blue MUI primary
+                      data: skillData.map((s) => ({
+                        id: s.name,
+                        value: s.count,
+                        label: s.name,
+                      })),
+                      innerRadius: 60,
+                      outerRadius: 120,
+                      paddingAngle: 2,
                     },
                   ]}
                   height={300}

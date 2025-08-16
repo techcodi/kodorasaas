@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import "../App.css";
+
 function Login() {
   const [isLogin, setIsLogin] = useState(false);
   const {
@@ -41,7 +43,7 @@ function Login() {
   }
 
   return (
-    <>
+    <div>
       <Navbar />
 
       <div className="auth login">
@@ -100,7 +102,7 @@ function Login() {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

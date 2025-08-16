@@ -12,7 +12,7 @@
   text-align: center;
   margin-bottom: 4rem;
 
-  color: #fff;
+  color: var(--text-color);
 }
 
 .features-title {
@@ -33,7 +33,7 @@
 
 .feature-card {
   padding: 1.5rem;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--toggle-border);
   border-radius: 1rem;
   transition: box-shadow 0.3s ease;
 }
@@ -113,7 +113,7 @@
 }
 
 .feature-description {
-  color: #fff;
+  color: var(--small-color);
 }
 
 @media (min-width: 768px) {

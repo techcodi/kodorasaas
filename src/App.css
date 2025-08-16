@@ -10,6 +10,7 @@
   place-items: center;
   position: relative;
   transform: translate(0%, 20%);
+  background-color: var(--bg-color);
 }
 .auth .auth-container {
   width: 30%;
@@ -34,7 +35,7 @@ label {
 }
 .auth-container form button {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
   padding: 0.7rem 2rem;
   font-size: 19px;
   border: none;

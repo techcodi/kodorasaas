@@ -6,7 +6,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .works-header {
@@ -23,6 +23,7 @@
 
 .works-subtitle {
   font-size: 1.25rem;
+  color: var(--small-color);
 }
 
 .steps-grid {
@@ -47,7 +48,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  color: #fff;
+  color: var(--color-primary);
   font-size: 1.5rem;
   font-weight: 700;
   z-index: 10;
@@ -82,8 +83,10 @@
 .step-title {
   font-size: 1.25rem;
   font-weight: 700;
-
   margin-bottom: 0.5rem;
+}
+.step-description {
+  color: var(--small-color);
 }
 
 @media (min-width: 768px) {
