@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { useEffect } from "react";
 import "./App.css";
-import WaitList from "./components/WaitList";
+
 import AppContext from "./context/AppContext";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -23,6 +24,17 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://livechat-web-widget.vercel.app/5PROct.js";
+  //   script.async = true;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <AppContext>
