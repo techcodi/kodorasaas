@@ -8,27 +8,38 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className="header-content">
           <img src="./logo.png" alt="logo-image" className="logo" />
 
-          <div className="desktop-nav">
-            <a href="#" className="nav-link">
-              Home
-            </a>
-            <a href="#feature" className="nav-link">
-              Features
-            </a>
-            <a href="#how-it-work" className="nav-link">
-              How it Works
-            </a>
-            <a href="#" className="nav-link">
-              Pricing
-            </a>
-          </div>
-          <ToggleDisplay />
-          <button
-            className="mobile-menu-button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "1rem",
+            }}
           >
-            {isMenuOpen ? "X" : <i className="fas fa-bars"></i>}
-          </button>
+            <div className="desktop-nav">
+              <a href="#" className="nav-link">
+                Home
+              </a>
+              <a href="#feature" className="nav-link">
+                Features
+              </a>
+              <a href="#how-it-work" className="nav-link">
+                How it Works
+              </a>
+              <a href="#" className="nav-link">
+                Pricing
+              </a>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <ToggleDisplay />
+              <button
+                className="mobile-menu-button"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? "X" : <i className="fas fa-bars"></i>}
+              </button>
+            </div>
+          </div>
         </div>
 
         {isMenuOpen && (
