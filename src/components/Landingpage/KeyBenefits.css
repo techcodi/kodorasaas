@@ -35,22 +35,12 @@
   padding: 2rem;
   border-radius: 1rem;
   transition: box-shadow 0.3s ease;
+  background: var(--toggle-border);
+  color: #111827;
 }
 
 .benefit-card:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.card-blue {
-  background: linear-gradient(to bottom right, #ff00ab, #e0e7ff);
-}
-
-.card-purple {
-  background: linear-gradient(to bottom right, #f5f3ff, #20003f);
-}
-
-.card-green {
-  background: linear-gradient(to bottom right, #ecfdf5, #ff00ab);
 }
 
 .benefit-icon {
@@ -77,12 +67,11 @@
 .benefit-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+
   margin-bottom: 1rem;
 }
 
 .benefit-description {
-  color: #111827;
   line-height: 1.625;
 }
 

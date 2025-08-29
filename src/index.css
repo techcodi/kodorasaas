@@ -32,10 +32,11 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-size: 95.8%;
 }
 
 .dark-theme {
-  --bg-color: #0a0f14;
+  --bg-color: #121212;
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
   --text-color: #ffffff;
   --text-second: #4b5563;

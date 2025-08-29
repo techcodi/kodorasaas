@@ -1,16 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AppContext";
-import supabase from "../services/supabase";
 import ToggleDisplay from "../ui/ToggleDisplay";
 import "./DashNav.css";
 function DashNav({ openNav, setOpenNav }) {
-  const { setUser } = useAuth();
-  const navigate = useNavigate();
-  const signOut = async () => {
-    await supabase.auth.signOut();
-    setUser(null);
-    navigate("/login");
-  };
   return (
     <div className="topbar">
       <div className="logo" style={{ display: "flex", alignItems: "center" }}>
@@ -29,12 +19,6 @@ function DashNav({ openNav, setOpenNav }) {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <span
-          onClick={signOut}
-          style={{ fontWeight: "600", cursor: "pointer" }}
-        >
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
-        </span>
         <ToggleDisplay />
       </div>
     </div>

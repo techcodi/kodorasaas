@@ -32,7 +32,7 @@
 }
 
 .nav-link {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-weight: 600;
   cursor: pointer;
 }

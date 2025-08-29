@@ -1,20 +1,25 @@
 .sidebar {
-  width: 220px;
+  width: 250px;
   background: #101828;
   color: #fff;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
-  transition: width 0.5s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .sidebar h2 {
   text-align: left;
+}
+.dash-links {
+  margin-top: 8rem;
 }
 .sidebar a {
   color: #fff;
   text-decoration: none;
   margin: 0.85rem 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   padding: 0.5rem;
   border-radius: 6px;
   transition: background 0.3s;
@@ -29,7 +34,9 @@
 .sidebar img {
   width: 7rem;
   height: auto;
-  margin-bottom: 3rem;
+  top: 0;
+  position: absolute;
+  left: 0;
 }
 .sidebar button {
   display: none;
@@ -47,5 +54,8 @@
   }
   .sidebar button {
     display: block;
+    color: #fff;
+    right: 10px;
+    position: absolute;
   }
 }

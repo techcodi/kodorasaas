@@ -116,11 +116,11 @@ function SkillProgress({ repoList, skills }) {
       {skillUsage.map(({ name, percentage }) => (
         <div key={name} className="skill-progress-item">
           <div className="skill-name">{name}</div>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${percentage}%` }}>
-              {percentage}%
-            </div>
-          </div>
+          <div className="progress-fill"> {percentage}%</div>
+          <div
+            className="progress-bar"
+            style={{ width: `${percentage}%`, backgroundColor: "#3b82f6" }}
+          ></div>
         </div>
       ))}
     </div>

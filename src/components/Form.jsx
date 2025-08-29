@@ -239,7 +239,7 @@ function Form() {
           {...register("username", { required: true })}
         />
         <button type="submit" disabled={isLoading}>
-          Analyze repos
+          {isLoading ? "Analyzing..." : "Analyze repos"}
         </button>
       </form>
 

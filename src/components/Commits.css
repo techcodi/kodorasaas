@@ -1,10 +1,10 @@
 .repo-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.2rem;
 }
 .repo-card {
-  background: #f9fafb;
+  background: var(--bg-color);
   border-radius: 8px;
   margin: 0;
   padding: 0 16px;
@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: var(--box-shadow);
 }
 .repo-meta {
   text-align: left;

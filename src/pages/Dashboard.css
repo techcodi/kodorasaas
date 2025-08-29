@@ -1,6 +1,7 @@
 .dashboard-container {
   display: flex;
   min-height: 100dvh;
+  transition: 0.9s ease;
 }
 .main-content {
   flex: 1;
